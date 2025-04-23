@@ -8,8 +8,20 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://mongo:27017/notesapp';
 
+// Specific CORS configuration for production deployment
+const corsOptions = {
+  origin: [
+    'http://51.38.220.119', 
+    'http://51.38.220.119:80',
+    'http://localhost:3000',  // For local development
+    'http://localhost'        // For Docker development
+  ],
+  methods: ['GET', 'POST', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+};
+
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(morgan('dev'));
 
