@@ -15,8 +15,8 @@ const corsOptions = {
     'http://51.38.220.119:80',
     'http://localhost:3000',  // For local development
     'http://localhost',       // For Docker development
-    'http://notes.minesworld.fr',
-    'https://notes.minesworld.fr'
+    'http://notes.minesword.fr',
+    'https://notes.minesword.fr'
   ],
   methods: ['GET', 'POST', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
