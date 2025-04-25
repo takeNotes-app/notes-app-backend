@@ -1,5 +1,5 @@
 # Use a specific Node.js version instead of just "latest"
-FROM node:18.19-alpine3.19 AS base
+FROM node:22-alpine3.20 AS base
 
 # Create a non-root user and group for the application
 RUN addgroup -S appgroup && adduser -S appuser -G appgroup
